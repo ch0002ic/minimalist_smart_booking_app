@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import '../constants/app_theme.dart';
 import '../models/room.dart';
+import 'amenity_chip.dart';
 
 class RoomCard extends StatelessWidget {
   final Room room;
@@ -9,13 +11,12 @@ class RoomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Container(
+      decoration: AppTheme.neumorphicDecoration,
       clipBehavior: Clip.antiAlias,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
       child: InkWell(
         onTap: onTap,
+        borderRadius: BorderRadius.circular(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -65,6 +66,17 @@ class RoomCard extends StatelessWidget {
               fontSize: 14,
               color: Colors.grey.shade600,
             ),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: room.amenities
+                .take(2)
+                .map((amenity) => AmenityChip(label: amenity))
+                .toList(),
           ),
         ],
       ),

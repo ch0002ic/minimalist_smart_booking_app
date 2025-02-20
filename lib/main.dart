@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app1/constants/app_theme.dart';
 import 'package:flutter_app1/pages/home_page.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,10 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Room Booking App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage(), // Ensure HomePage is correctly imported and defined
+      theme: AppTheme.lightTheme,
+      home: const HomePage(),
     );
   }
 }
