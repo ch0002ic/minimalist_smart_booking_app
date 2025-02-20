@@ -1,4 +1,4 @@
-# flutter_app1
+# Minimalist smart room booking app
 
 A new Flutter project.
 
