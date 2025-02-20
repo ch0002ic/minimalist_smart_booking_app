@@ -86,8 +86,8 @@ The project is organized into the following key folders under the `lib/` directo
    flutter run
    ```
 4. **Build for Production (生产构建):**
-   English: Follow the standard Flutter build instructions for Android and iOS.
-   中文: 按照标准的 Flutter 构建说明，为 Android 和 iOS 平台构建应用。
+   - English: Follow the standard Flutter build instructions for Android and iOS.
+   - 中文: 按照标准的 Flutter 构建说明，为 Android 和 iOS 平台构建应用。
 
 ---
 
